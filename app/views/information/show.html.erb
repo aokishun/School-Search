@@ -1,13 +1,13 @@
 <p>名前：<%= @information.name %></p>
 <p>学校：<%= @information.school %></p>
 <p>プロゲートlv：<%= @information.lv %></p>
-
+<p>興味のある言語</p>
 <%if @languages.html == 1%>
   <p>html</p>
 <% end%>
-
-<% @languages.each do |a|%>
-<%if a == 1%>
-  <p><%= a %></p>
+<%if @languages.ruby == 1%>
+  <p>ruby</p>
 <% end%>
+<%if @languages.php == 1%>
+  <p>php</p>
 <% end%>

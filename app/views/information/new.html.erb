@@ -2,7 +2,7 @@
 <% @information.errors.full_messages.each do |message| %>
   <%= message %>
 <%end%>
-<%= form_for (@information) do |f| %>
+<%= form_for (@information,url: signup_path) do |f| %>
 
 <p>
   <%= f.label :name %><br>

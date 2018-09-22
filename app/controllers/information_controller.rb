@@ -12,20 +12,28 @@ class InformationController < ApplicationController
 
   def new
     @information = Information.new
-    @information.save
   end
 
   def create
     @information = Information.new(information_params)
     @information.language = Language.new(language_params)
-    @information.save
-
+    if @information.save
+      log_in @information
+    else
     redirect_to new_path
+    end
   end
 
-  def update
-    redirect_to new_path
+  def edit
+     @information = Information.find(params[:id])
   end
+
+  def destroy
+    log_out
+    redirect_to root_url
+  end
+
+
 
 
 
