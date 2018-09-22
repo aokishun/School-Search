@@ -1,0 +1,13 @@
+<p>名前：<%= @information.name %></p>
+<p>学校：<%= @information.school %></p>
+<p>プロゲートlv：<%= @information.lv %></p>
+
+<%if @languages.html == 1%>
+  <p>html</p>
+<% end%>
+
+<% @languages.each do |a|%>
+<%if a == 1%>
+  <p><%= a %></p>
+<% end%>
+<% end%>

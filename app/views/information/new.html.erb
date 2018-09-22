@@ -1,0 +1,106 @@
+<h1>Add New2</h1>
+<% @information.errors.full_messages.each do |message| %>
+  <%= message %>
+<%end%>
+<%= form_for (@information) do |f| %>
+
+<p>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :mail %><br>
+  <%= f.text_field :mail %>
+</p>
+
+<p>
+  <%= f.label :school %><br>
+  <%= f.text_field :school %>
+</p>
+
+<p>
+  <%= f.label :lv %><br>
+  <%= f.text_field :lv %>
+</p>
+
+
+<%= fields_for @information.language do |language| %>
+<p>
+  <%= language.label :html %><br>
+  <%= language.check_box :html, {}, 1, 0 %>
+</p>
+
+
+<p>
+  <%= language.label :js %><br>
+  <%= language.check_box :js, {}, 1, 0 %>
+</p>
+
+  <p>
+    <%= language.label :jquery %><br>
+    <%= language.check_box :jquery, {}, 1, 0 %>
+  </p>
+
+  <p>
+    <%= language.label :ruby %><br>
+    <%= language.check_box :ruby, {}, 1, 0 %>
+  </p>
+
+  <p>
+    <%= language.label :rails %><br>
+    <%= language.check_box :rails, {}, 1, 0 %>
+  </p>
+
+  <p>
+    <%= language.label :php %><br>
+    <%= language.check_box :php, {}, 1, 0 %>
+  </p>
+
+
+  <p>
+    <%= language.label :java %><br>
+    <%= language.check_box :java, {}, 1, 0 %>
+  </p>
+
+  <p>
+    <%= language.label :python %><br>
+    <%= language.check_box :python, {}, 1, 0 %>
+  </p>
+
+  <p>
+    <%= language.label :swift %><br>
+    <%= language.check_box :swift, {}, 1, 0 %>
+  </p>
+
+  <p>
+    <%= language.label :command %><br>
+    <%= language.check_box :command, {}, 1, 0 %>
+  </p>
+
+  <p>
+    <%= language.label :git %><br>
+    <%= language.check_box :git, {}, 1, 0 %>
+  </p>
+
+  <p>
+    <%= language.label :sql %><br>
+    <%= language.check_box :sql, {}, 1, 0 %>
+  </p>
+
+  <p>
+    <%= language.label :sass %><br>
+    <%= language.check_box :sass, {}, 1, 0 %>
+  </p>
+
+  <p>
+    <%= language.label :go %><br>
+    <%= language.check_box :go, {}, 1, 0 %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<% end %>
