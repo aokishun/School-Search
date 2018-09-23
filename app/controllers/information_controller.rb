@@ -12,11 +12,11 @@ class InformationController < ApplicationController
 
   def new
     @information = Information.new
+    @information.build_language
   end
 
   def create
     @information = Information.new(information_params)
-    @information.language = Language.new(language_params)
     if @information.save
       log_in @information
     else

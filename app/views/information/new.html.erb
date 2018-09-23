@@ -2,7 +2,7 @@
 <% @information.errors.full_messages.each do |message| %>
   <%= message %>
 <%end%>
-<%= form_for (@information,url: signup_path) do |f| %>
+<%= form_for (@information) do |f| %>
 
 <p>
   <%= f.label :name %><br>
@@ -25,7 +25,7 @@
 </p>
 
 
-<%= fields_for @information.language do |language| %>
+<%= fields_for :language,@information.language do |language| %>
 <p>
   <%= language.label :html %><br>
   <%= language.check_box :html, {}, 1, 0 %>

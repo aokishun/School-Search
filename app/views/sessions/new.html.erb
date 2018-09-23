@@ -1,0 +1,15 @@
+<h1>Sign up</h1>
+
+<%= form_for (:session,url:login_path) do |f| %>
+
+<p>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :mail %><br>
+  <%= f.text_field :mail %>
+</p>
+<%= f.submit %>
+<% end %>
