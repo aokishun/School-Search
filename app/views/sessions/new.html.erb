@@ -1,6 +1,6 @@
 <h1>Sign up</h1>
 
-<%= form_for (:session,url:login_path) do |f| %>
+<%= form_for :session,url:login_path do |f| %>
 
 <p>
   <%= f.label :name %><br>
@@ -11,5 +11,6 @@
   <%= f.label :mail %><br>
   <%= f.text_field :mail %>
 </p>
-<%= f.submit %>
+<%= f.submit  "Log in"%>
 <% end %>
+<p>New user? <%= link_to "Sign up now!", signup_path %></p>

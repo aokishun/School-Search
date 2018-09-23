@@ -18,9 +18,9 @@ class InformationController < ApplicationController
   def create
     @information = Information.new(information_params)
     if @information.save
-      log_in @information
+      redirect_to login_path
     else
-    redirect_to new_path
+      redirect_to new_path
     end
   end
 
@@ -29,8 +29,8 @@ class InformationController < ApplicationController
   end
 
   def destroy
-    log_out
-    redirect_to root_url
+    logout
+    redirect_to root_path
   end
 
 
